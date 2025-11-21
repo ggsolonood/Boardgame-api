@@ -1,0 +1,11 @@
+import { PartialType } from '@nestjs/mapped-types';
+import { CreateRoomDto } from './create-room.dto';
+
+export class UpdateRoomDto extends PartialType(CreateRoomDto) {
+  name: string;
+  capacity: number;
+  status: string;
+  price: number;
+  tables: string[];
+  image?: string;
+}
